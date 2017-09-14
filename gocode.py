@@ -129,7 +129,7 @@ class Gocode(sublime_plugin.EventListener):
 		src = view.substr(sublime.Region(0, view.size()))
 		filename = view.file_name()
 		cloc = "c{0}".format(loc)
-		gocodeFlag = ["-f=csv", "-sock=none"] if golangconfig.setting_value("gocode_client_mode")[0] else ["-f=csv"]
+		gocodeFlag = ["-f=csv", "-sock=none"] if golangconfig.setting_value("gocode_serverless_mode")[0] else ["-f=csv"]
 
 		path, env = golangconfig.subprocess_info("gocode", ['GOPATH', 'PATH'], view=view)
 		cmd = [path] + gocodeFlag + ["autocomplete", filename, cloc]
