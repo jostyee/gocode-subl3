@@ -10,20 +10,6 @@ This is a modified version of _nsf_'s [Sublime Text 3 plugin](https://github.com
         "PATH": "/Users/user/dev/go/bin",
         "GOPATH": "/Users/user/dev/go",
 
-        // Format source files each time they're saved.
-        "format_on_save": true,
-
-        // A formatting backend (must be either 'gofmt', 'goimports' or 'both').
-        // The 'both' option will first run 'goimports' then 'gofmt'
-        "format_backend": "goimports",
-
-        // Lint source files each time they're saved.
-        "lint_on_save": true,
-
-        // A lintting backend (must be either 'govet' or 'golint' or 'both').
-        // The 'both' option will first run 'go vet' then 'golint'
-        "lint_backend": "both",
-
         // Enable gocode autocompletion.
         "autocomplete": true,
 
