@@ -94,7 +94,7 @@ class GocodeGofmtCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
 		view = self.view
 		src = view.substr(sublime.Region(0, view.size()))
-		path, env = golangconfig.subprocess_info("gofmt", ['GOPATH', 'PATH'], view=view)
+		path, env = golangconfig.subprocess_info("goimports", ['GOPATH', 'PATH'], view=view)
 		gofmt = subprocess.Popen([path],
 			stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=env)
 		sout, serr = gofmt.communicate(src.encode())
